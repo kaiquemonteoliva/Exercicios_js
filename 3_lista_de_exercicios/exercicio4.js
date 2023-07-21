@@ -8,6 +8,6 @@ const promptSync = require("prompt-sync")();
 let numero = parseInt(promptSync("Digite um numero de 1 a 10: "))
 
 
-for(index = 0; index <= 10; index ++){
+for(let index = 0; index <= 10; index ++){
     console.log(numero +  " x " + index + " = " + (numero*index))
 }
