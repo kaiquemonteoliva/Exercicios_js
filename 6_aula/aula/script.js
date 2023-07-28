@@ -14,6 +14,7 @@ function calcular (event){
     console.log(classificacaoImc)
     usuario = organizarDados(usuario,imcCalculado,classificacaoImc)
     cadastrarUsuario(usuario)
+    window.location.reload()
     
 
 }
