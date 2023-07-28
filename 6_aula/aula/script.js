@@ -3,9 +3,9 @@
 //ok 3. gerar a calssificacao imc -> classificacaoImc 
 //ok 4. organizar os dados do usuario para salvar na lista e gerar a data de cadastro 
 //ok 5. inserir o usuario na lista(salvar no localStorage) 
-//   6. Funcao para carregar os usuarios(localStorage), ao carregar a pagina, chamar funcao
-//   7. renderizar o conteudo da lista no formato da tabela de usuarios
-//   8. botao para limpar os registro(localStorage)
+//ok 6. Funcao para carregar os usuarios(localStorage), ao carregar a pagina, chamar funcao
+//ok 7. renderizar o conteudo da lista no formato da tabela de usuarios
+//ok 8. botao para limpar os registro(localStorage)
 function calcular (event){
     event.preventDefault();
     let usuario = receberValores();
