@@ -66,7 +66,7 @@ function organizarDados(dadosUsuario, valorImc, classificacaoImc){
     console.log(dataHoraAtual)
 
     let dadosUsuarioAtualizado = {
-        ...dadosUsuario,//declaracao bred
+        ...dadosUsuario,//declaracao bred - repete os dados que esta no objeto, mantem os dados
         imc: valorImc,
         situacaoImc: classificacaoImc,
         dataCadastro: dataHoraAtual
