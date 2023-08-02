@@ -21,12 +21,13 @@
 
 function calcular(event){
     event.preventDefault();
-    let usuario = recebervalores();
+    let usuario = recebervalores(); //O que vai dentro dos parenteses da funcao [sao parametros ou argumentos]
    let idadeCalculada = calcularIdade(usuario.ano);
    let faixaDeIdade = faixaEtaria(idadeCalculada);
    console.log(faixaDeIdade);
    usuario = organizarDados(usuario, idadeCalculada, faixaDeIdade);
    cadastrarUsuario(usuario);
+   window.location.reload()
 }
 
 
@@ -38,6 +39,7 @@ function recebervalores(){ //.value pega o valor do imput
     let anoRecebido = document.getElementById("ano-nascimento").value
 
     let dadosUsuario = {
+        //o que sao passados antes dos : sao chamados de propriedades
         nome: nomeRecebido,
         dia: diaRecebido,
         mes: mesRecebido,
@@ -113,4 +115,53 @@ function cadastrarUsuario (dadosUsuario){
     listaUsuario.push(dadosUsuario)
 
     localStorage.setItem("usuarioCadastrado", JSON.stringify(listaUsuario))
+}
+
+//6. Função para carregar as pessoas, carrega a lista do localStorage, chamar ao carregar a página
+
+
+function carregamentoUsuario(){
+    let carregamentoLista = []
+
+    if(localStorage.getItem("usuarioCadastrado") != null){
+        carregamentoLista = JSON.parse(localStorage.getItem("usuarioCadastrado"))
+    }
+
+    if(carregamentoLista.length == 0){
+        let tabela = document.getElementById("corpo-tabela")
+        tabela.innerHTML = `<tr class = "linha-mensagem">
+        <td colspan="6">Nenhum usuario cadastrado 😞 </td>
+        </tr>`
+    }else{
+        montarTabela(carregamentoLista)
+    }
+
+    console.log(carregamentoLista)
+}
+
+
+window.addEventListener("DOMContentLoaded", () => carregamentoUsuario())
+
+
+function montarTabela (listaDeCarregamento){
+    let tabela = document.getElementById("corpo-tabela")
+    let template = ""
+
+    listaDeCarregamento.forEach(usuario => {
+        template +=  ` <tr>
+        <td data-cell="nome">${usuario.nome}</td>
+        <td data-cell="data de nascimento">${usuario.dia}/${usuario.mes}/${usuario.ano}</td>
+        <td data-cell="idade">${usuario.idade}</td>
+        <td data-cell="faixa etária">${usuario.faixaEtaria}</td>
+    </tr> 
+        `
+    });
+
+    tabela.innerHTML = template
+}
+
+function deletarRegistros(){
+    localStorage.removeItem("usuarioCadastrado")
+    window.location.reload()
+
 }
