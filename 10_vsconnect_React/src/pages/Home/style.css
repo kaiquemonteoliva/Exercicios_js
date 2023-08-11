@@ -22,19 +22,7 @@ body {
 }
 
 
-#sombra{
-    position: fixed;
-    top: 0;
-    right: 110vW;
-    background-color: rgba(0,0,0,0.65);
 
-    width: 130vw;
-    height: 100vh;
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-    backdrop-filter: blur(10px);
-}
 
 .container {
     max-width: 1400px;

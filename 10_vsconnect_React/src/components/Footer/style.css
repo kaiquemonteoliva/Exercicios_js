@@ -1,32 +1,67 @@
 /* FOOTER */
-.span_dicas_texto{
-    width: 90%;
-    text-align: center;
+@media screen and (max-width: 768px) {
+    .span_dicas_texto {
+        width: 90%;
+        text-align: center;
+    }
+
+    .rodape_conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape_conteudo_contatos {
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .rodape_conteudo>img {
+        order: -1;
+    }
+
+    .rodape_conteudo_paginas {
+        order: 1;
+    }
 }
 
-.rodape_conteudo{
-    flex-direction: column;
-    align-items: center;
-}
-
-.rodape_conteudo_contatos{
-    align-items: center;
-    margin: 50px 0;
-}
-
-.rodape_conteudo>img{
-    order: -1;
-}
-
-.rodape_conteudo_paginas{
-    order: 1;
-}
 
 
 @media screen and (max-width: 500px) {
-   
+    .banner_conteudo {
+        font-size: 13px;
+    }
+    
+    .span_cliente{
+        font-size: 18px;
+    }
+
+    h2{
+        font-size: 22px;
+    }
+
+    main ul {
+        margin: 40px 0;
+    }
+
+    main ul li {
+        font-size: 17px;
+    }
+
+    .botao {
+        font-size: 16px;
+    }
+    
+    .clientes_botao_cli{
+        padding: 12px 40px;   
+    }
+    
+    .clientes_botao_devs{
+        padding: 9px 40px;   
+    }
 
     .span_dicas_texto {
         font-size: 18px;
     }
+
+
 }

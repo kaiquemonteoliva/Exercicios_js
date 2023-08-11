@@ -2,14 +2,16 @@ import Logo from "../../assets/img/logo.svg"
 import "./style.css"
 function Header() {
 
-       // Mostrar menu no layout responsivo
+    function mostrarMenu() {
+
+         // Mostrar menu no layout responsivo
        let menu = document.getElementById("menu_links") as HTMLCanvasElement; // Obtém o elemento do menu pelo ID
        let sombra: any = document.getElementById("sombra"); // Obtém o elemento da sombra pelo ID
        let menu_barras: any = document.getElementById("menu_barras"); // Obtém o elemento do botão do menu pelo ID
    
        let body: any = document.getElementsByTagName("body")[0]; // Obtém o elemento body (primeiro elemento)
 
-    function mostrarMenu() {
+
         if (window.getComputedStyle(menu).left != "10px") { // Verifica se a propriedade 'left' do estilo computado do elemento do menu é diferente de 10px
             menu.style.left = "10px"; // Define a posição 'left' do menu como 10px movendo ele para direita
             sombra.style.right = "-10vw"; // Move a sombra para a direita
