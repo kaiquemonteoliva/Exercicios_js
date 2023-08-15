@@ -1,7 +1,36 @@
+import { useState } from "react"
 import CardDev from "../../components/CardDev"
 import "./style.css"
 
 export default function ListaDev() {
+
+    const [devs, setDevs] = useState<any[]>([
+        {
+            img_perfil: "https://github.com/Thiago-Nascimento.png",
+            nome: "Thiago Nascimento",
+            email: "thiago@email.com",
+            skills: ["HTML", "CSS", "REACT"]
+        },
+        {
+            img_perfil: "https://github.com/JessicaSanto.png",
+            nome: "Jessica Franzon",
+            email: "jessica@email.com",
+            skills: ["HTML", "CSS", "REACT"]
+        },
+        {
+            img_perfil: "https://github.com/odirlei-assis.png",
+            nome: "Odirlei Sabella",
+            email: "odirlei@email.com",
+            skills: ["HTML", "CSS", "ANGULAR"]
+        },
+        {
+            img_perfil: "https://github.com/alexiamelhado18.png",
+            nome: "Aléxia Vitória",
+            email: "alexia@email.com",
+            skills: ["PYTHON", "VUE", "REACT"]
+        }
+    ])
+
 
     return (
 
