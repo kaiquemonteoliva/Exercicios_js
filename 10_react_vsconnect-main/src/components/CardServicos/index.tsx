@@ -9,7 +9,7 @@ export function CardServicos(props: any) {
         <div className="servico">
             <div className="topo_servico">
                 <h3>{props.titulo}</h3>
-                <span>{props.salario}</span>
+                <span>{props.valor}</span>
 
 
             </div>
