@@ -50,6 +50,7 @@ export default function ListaServicos() {
             <div className="container container_lista_servicos">
                 <div className="lista_servicos_conteudo">
                     <h1>Lista de Serviços</h1>
+                    
                     <hr/>
                         <form method="post">
                             <div className="wrapper_form">
@@ -65,6 +66,7 @@ export default function ListaServicos() {
                                 {servicos.map((servico: any, index: number) => {
                                     return <li key={index}>
                                        <CardServicos
+                                        id={servico.id}
                                         titulo={servico.nome}
                                         valor={servico.valor}
                                         descricao={servico.descricao}

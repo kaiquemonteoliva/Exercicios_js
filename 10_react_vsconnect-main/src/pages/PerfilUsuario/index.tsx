@@ -11,7 +11,7 @@ import "./style.css";
 import api from "../../utils/api";
 
 
-
+//Componente
 function PerfilUsuario() {
 
     const { idUsuario } = useParams();
