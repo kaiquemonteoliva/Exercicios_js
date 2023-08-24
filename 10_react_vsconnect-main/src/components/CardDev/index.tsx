@@ -3,6 +3,15 @@ import "./style.css"
 
 export default function CardDev(props: any) {
 
+    function parseListaTechs(){
+        //typeof = tipo de
+        if(typeof props.techs == "string"){
+            return JSON.parse(props.techs)
+        }else{
+            return props.thecs
+        }
+    }
+
     return (
         <div className="dev">
             <div className="grupo_contato">
@@ -15,7 +24,7 @@ export default function CardDev(props: any) {
             </div>
             <div className="techs">
                 {
-                    props.techs.map((tech: string, index: number) =>{
+                    parseListaTechs().map((tech: string, index: number) =>{
                         return <span key={index}>{tech}</span> 
                     })
                 }
