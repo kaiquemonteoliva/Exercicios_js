@@ -15,7 +15,7 @@ import VisualizarServico from './pages/VisualizarServico'
 import CadastroUsuario from './pages/CadastroUsuario'
 import CadastroServico from './pages/CadastroServico'
 
-
+//teste
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
