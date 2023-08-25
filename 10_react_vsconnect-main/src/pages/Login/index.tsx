@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import secureLocalStorage from "react-secure-storage";
 import api from "../../utils/api";
+import { useNavigate } from "react-router-dom";
 
 
 import "./style.css";
@@ -9,6 +10,8 @@ import "./style.css";
 
 
 function Login() {
+
+    const navigate = useNavigate()
 
     const[email, setEmail] = useState<string>("")
     const[senha, setSenha] = useState<string>("")
@@ -25,6 +28,7 @@ function Login() {
         api.post("login", usuario).then((response) => {
             console.log(response)
             secureLocalStorage.setItem("user", response.data)
+            navigate("/perfil/" + response.data.user.id)
 
         }).catch((error) => {
             console.log(error)
