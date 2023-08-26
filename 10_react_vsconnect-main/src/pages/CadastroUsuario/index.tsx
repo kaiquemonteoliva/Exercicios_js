@@ -49,13 +49,13 @@ function CadastroUsuario() {
         formData.append("password", senha)
         formData.append("user_img", foto)
         formData.append("cep", cep)
-        formData.append("nome", logradouro)
-        formData.append("nome", numero)
-        formData.append("nome", bairro)
+        formData.append("logradouro", logradouro)
+        formData.append("numero", numero)
+        formData.append("bairro", bairro)
         formData.append("cidade", cidade)
         formData.append("uf", uf)
         
-        formData.append("hardskill", JSON.stringify(skillsSelecionadas))
+        formData.append("hardSkills", JSON.stringify(skillsSelecionadas))
         api.post("users", formData).then((response) => {
             console.log(response)
             alert("Usuario cadastrado com sucesso")

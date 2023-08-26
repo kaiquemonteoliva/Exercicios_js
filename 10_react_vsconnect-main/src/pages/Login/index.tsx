@@ -29,6 +29,7 @@ function Login() {
             console.log(response)
             secureLocalStorage.setItem("user", response.data)
             navigate("/perfil/" + response.data.user.id)
+            navigate(0)
 
         }).catch((error) => {
             console.log(error)

@@ -9,7 +9,7 @@ export function CardServicos(props: any) {
         if(typeof props.techs == "string"){
             return JSON.parse(props.techs)
         }else{
-            return props.thecs
+            return props.techs
         }
     }
 
@@ -19,7 +19,8 @@ export function CardServicos(props: any) {
 
         <div className="servico">
             <div className="topo_servico">
-            <Link to={"/servicos" + props.id}>{props.nome}</Link>
+            <span>{props.nome}</span>
+            <Link to={"servicos" + props.id}>{props.nome}</Link>
                 {/* <h3>{props.titulo}</h3> */}
                 <span>{props.valor}</span>
 
