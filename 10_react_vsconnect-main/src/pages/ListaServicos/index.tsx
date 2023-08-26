@@ -67,7 +67,7 @@ export default function ListaServicos() {
                                     return <li key={index}>
                                        <CardServicos
                                         id={servico.id}
-                                        titulo={servico.nome}
+                                        nome={servico.nome}
                                         valor={servico.valor}
                                         descricao={servico.descricao}
                                         techs={servico.techs}

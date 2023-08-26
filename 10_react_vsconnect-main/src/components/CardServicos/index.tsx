@@ -19,7 +19,7 @@ export function CardServicos(props: any) {
 
         <div className="servico">
             <div className="topo_servico">
-            <span>{props.nome}</span>
+            
             <Link to={"servicos" + props.id}>{props.nome}</Link>
                 {/* <h3>{props.titulo}</h3> */}
                 <span>{props.valor}</span>
